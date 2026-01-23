@@ -6,3 +6,5 @@ you know any workaround, please raise an issue.
 - i already tried using VPN, but it is not allowed in the college network.
 - tried cloudflare WARP, but it also doesn't work too.
 
+## how to use this repo
+- clone this repo(main branch only) to your local machine
