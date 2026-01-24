@@ -1,5 +1,26 @@
 // Source: https://sudarshansudarshan.github.io/pinternship/case-studies/05-any-type-in-typescript/
 
+interface Question = {
+  questionId : string,
+  questionText: string,
+  answer:any
+};
+
+questions:Question[] = [];
+
+function recordAnswer(questionId:string, questionText:string, answer:<type>)<type>{
+  questions.push({questionId, questionText, answer});
+}
+
+function printAllAnswers(){
+  console.log(questions);
+}
+
+recordAnswer<string>("001","your name?","faaris");
+recordAnswer<number>("002","your name?","20");
+recordAnswer<array<string>>("003","list 3 food",["apple","idly","dosa"]);
+
+printAllAnswers()
 /*
 Problem Statement:
 
