@@ -5,8 +5,8 @@ interface Member {
   fines?: number[];
 }
 
-const member1: Member = { id: 1, name: "ram", email: "ram@abc.com", fines: [5, 10, 2.5] };
-const member2: Member = { id: 2, name: "raja", fines: [3, 7] };
+const member1: Member = { id: 1, name: "alice", email: "alice@abc.com", fines: [5, 10, 2.5] };
+const member2: Member = { id: 2, name: "bob", fines: [3, 7] };
 
 const displayMember = (member: Member): void => {
   console.log(`ID: ${member.id}, Name: ${member.name} ${member.email ? `, Email: ${member.email}` : ""}`);
@@ -28,21 +28,34 @@ const membershipFee = (baseFee: number, discountRate: number = 0.1): number => {
 console.log(100, membershipFee(100));
 console.log(100, membershipFee(100, 0.2));
 
-const visitorLog: Map<Date, Member[]> = new Map();
+const visitorLog: Map<string, Member[]> = new Map();
 
 const logVisitor = (member: Member, date: Date = new Date(), callback: (member: Member) => void): void => {
-  if (!visitorLog.has(date)) {
-    visitorLog.set(date, []);
+  const day = date.getDate().toString().padStart(2, '0');
+  const year = date.getFullYear();
+  const month = (date.getMonth() + 1).toString().padStart(2, '0');
+  const dateString = `${year}-${month}-${day}`;// yyyy-mm-dd
+  console.log({date, dateString});
+  if (!visitorLog.has(dateString)) {
+    visitorLog.set(dateString, []);
   }
-  visitorLog.get(date)!.push(member);
+  visitorLog.get(dateString)!.push(member);
+  if (!visitorLog.has(dateString)) {
+    visitorLog.set(dateString, []);
+  }
+  visitorLog.get(dateString)!.push(member);
   callback(member);
 }
 
-const greet = (member: Member): void => {
+const consoleGreet = (member: Member): void => {
   console.log(`Welcome to the library, ${member.name}!`);
 }
+const vipGreet = (member: Member): void => {
+  console.log(`Welcome back, esteemed member ${member.name}!`);
+}
 
-logVisitor(member1, new Date(), greet);
+logVisitor(member1, new Date(), consoleGreet);
+logVisitor(member2, undefined, vipGreet);
 console.log(visitorLog);
 
 const factorial = (n: number): number => {
@@ -63,38 +76,59 @@ const generateReport = (members: Member[], format: "text" | "json" = "text"): st
 console.log(generateReport([member1, member2], "text"));
 console.log(generateReport([member1, member2], "json"));
 
-
-// bun tsr ex - 12.ts
+// ❯ bun tsr ex - 12.ts
 
 // $ timeout - k 1s 1s sh - c 'bun x tsc --noEmit && bun run "$1"' -- "ex-12.ts"
-// ID: 1, Name: ram, Email: ram @abc.com
-// ID: 2, Name: raja
+// ID: 1, Name: alice, Email: alice @abc.com
+// ID: 2, Name: bob
 // {
 //   id: 1,
-//     name: "ram",
-//       email: "ram@abc.com",
+//     name: "alice",
+//       email: "alice@abc.com",
 //         fines: [5, 10, 2.5],
 // } 17.5
 // {
 //   id: 2,
-//     name: "raja",
+//     name: "bob",
 //       fines: [3, 7],
 // } 10
 // 100 90
 // 100 80
-// Welcome to the library, ram!
+// {
+//   date: 2026-01 - 26T19:05: 10.243Z,
+//     dateString: "2026-01-27",
+// }
+// Welcome to the library, alice!
+// {
+//   date: 2026-01 - 26T19:05: 10.259Z,
+//     dateString: "2026-01-27",
+// }
+// Welcome back, esteemed member bob!
 // Map(1) {
-//   2026-01 - 26T18: 58:07.243Z: [
+//   "2026-01-27": [
 //     {
 //       id: 1,
-//       name: "ram",
-//       email: "ram@abc.com",
+//       name: "alice",
+//       email: "alice@abc.com",
 //       fines: [5, 10, 2.5],
+//     }, {
+//       id: 1,
+//       name: "alice",
+//       email: "alice@abc.com",
+//       fines: [5, 10, 2.5],
+//     }, {
+//       id: 2,
+//       name: "bob",
+//       fines: [3, 7],
+//     }, {
+//       id: 2,
+//       name: "bob",
+//       fines: [3, 7],
 //     }
 //   ],
 // }
 // 5 120
 // 10 3628800
-// ID: 1, Name: ram, Email: ram @abc.com
-// ID: 2, Name: raja
-// [{ "id": 1, "name": "ram", "email": "ram@abc.com", "fines": [5, 10, 2.5] }, { "id": 2, "name": "raja", "fines": [3, 7] }]
+// ID: 1, Name: alice, Email: alice @abc.com
+// ID: 2, Name: bob
+// [{ "id": 1, "name": "alice", "email": "alice@abc.com", "fines": [5, 10, 2.5] }, { "id": 2, "name": "bob", "fines": [3, 7] }]
