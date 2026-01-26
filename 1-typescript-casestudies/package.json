@@ -2,7 +2,7 @@
   "name": "1-typescript-casestudies",
   "private": true,
   "scripts": {
-    "tsr": "bun x tsc --noEmit && bun run"
+    "tsr": "timeout -k 1s 1s sh -c 'bun x tsc --noEmit && bun run ex-11.ts'"
   },
   "devDependencies": {
     "typescript": "^5",
