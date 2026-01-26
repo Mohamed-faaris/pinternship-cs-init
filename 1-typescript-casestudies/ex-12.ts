@@ -15,10 +15,17 @@ const displayMember = (member: Member): void => {
 displayMember(member1);
 displayMember(member2);
 
+const calculateFinesHelper = (...fines: number[]): number => {
+  return fines.reduce((total, fine) => total + fine, 0);
+}
+
+console.log(calculateFinesHelper(5, 10, 2.5));
+
 const calculateFines = (member: Member): number => {
   if (!member.fines) return 0;
-  return member.fines.reduce((total, fine) => total + fine, 0);
+  return calculateFinesHelper(...member.fines);
 }
+
 console.log(member1, calculateFines(member1));
 console.log(member2, calculateFines(member2));
 
@@ -36,10 +43,6 @@ const logVisitor = (member: Member, date: Date = new Date(), callback: (member: 
   const month = (date.getMonth() + 1).toString().padStart(2, '0');
   const dateString = `${year}-${month}-${day}`;// yyyy-mm-dd
   console.log({date, dateString});
-  if (!visitorLog.has(dateString)) {
-    visitorLog.set(dateString, []);
-  }
-  visitorLog.get(dateString)!.push(member);
   if (!visitorLog.has(dateString)) {
     visitorLog.set(dateString, []);
   }
@@ -73,7 +76,7 @@ const generateReport = (members: Member[], format: "text" | "json" = "text"): st
     return members.map(member => `ID: ${member.id}, Name: ${member.name} ${member.email ? `, Email: ${member.email}` : ""}`).join("\n");
   }
 }
-console.log(generateReport([member1, member2], "text"));
+console.log(generateReport([member1, member2] ));
 console.log(generateReport([member1, member2], "json"));
 
 // ❯ bun tsr ex - 12.ts
@@ -81,6 +84,7 @@ console.log(generateReport([member1, member2], "json"));
 // $ timeout - k 1s 1s sh - c 'bun x tsc --noEmit && bun run "$1"' -- "ex-12.ts"
 // ID: 1, Name: alice, Email: alice @abc.com
 // ID: 2, Name: bob
+// 17.5
 // {
 //   id: 1,
 //     name: "alice",
@@ -95,12 +99,12 @@ console.log(generateReport([member1, member2], "json"));
 // 100 90
 // 100 80
 // {
-//   date: 2026-01 - 26T19:05: 10.243Z,
+//   date: 2026-01 - 26T19: 12: 24.588Z,
 //     dateString: "2026-01-27",
 // }
 // Welcome to the library, alice!
 // {
-//   date: 2026-01 - 26T19:05: 10.259Z,
+//   date: 2026-01 - 26T19: 12: 24.590Z,
 //     dateString: "2026-01-27",
 // }
 // Welcome back, esteemed member bob!
@@ -111,15 +115,6 @@ console.log(generateReport([member1, member2], "json"));
 //       name: "alice",
 //       email: "alice@abc.com",
 //       fines: [5, 10, 2.5],
-//     }, {
-//       id: 1,
-//       name: "alice",
-//       email: "alice@abc.com",
-//       fines: [5, 10, 2.5],
-//     }, {
-//       id: 2,
-//       name: "bob",
-//       fines: [3, 7],
 //     }, {
 //       id: 2,
 //       name: "bob",
@@ -132,3 +127,5 @@ console.log(generateReport([member1, member2], "json"));
 // ID: 1, Name: alice, Email: alice @abc.com
 // ID: 2, Name: bob
 // [{ "id": 1, "name": "alice", "email": "alice@abc.com", "fines": [5, 10, 2.5] }, { "id": 2, "name": "bob", "fines": [3, 7] }]
+//  ~/pr/pin / 1 - typescript - casestudies │ Faaris - cs!1                                                                                   ✔ │ 12: 42: 24 AM 
+//  * History restored 
