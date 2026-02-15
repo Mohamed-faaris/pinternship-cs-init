@@ -286,3 +286,50 @@ Learn about Dependency Injection in TypeScript
 [Pinternship](https://sudarshansudarshan.github.io/pinternship/)
 # Dependency Injection
 */
+
+// Implementation
+
+interface PaymentGateway {
+  processPayment(amount: number): Promise<boolean>;
+}
+
+class PaymentProcessor {
+  constructor(private gateway: PaymentGateway) { }
+
+  async pay(amount: number): Promise<void> {
+    const success = await this.gateway.processPayment(amount);
+    if (success) {
+      console.log("Payment successful!");
+    } else {
+      console.log("Payment failed.");
+    }
+  }
+}
+
+class BankTransferGateway implements PaymentGateway {
+  async processPayment(amount: number): Promise<boolean> {
+    console.log(`Processing payment of $${amount} via Bank Transfer.`);
+    // Simulate processing
+    return true;
+  }
+}
+
+class FailingMockGateway implements PaymentGateway {
+  async processPayment(amount: number): Promise<boolean> {
+    console.log(`Mock processing payment of $${amount} - simulating failure.`);
+    return false;
+  }
+}
+
+// Test
+async function test() {
+  const bankGateway = new BankTransferGateway();
+  const processor = new PaymentProcessor(bankGateway);
+  await processor.pay(100);
+
+  const failingGateway = new FailingMockGateway();
+  const failingProcessor = new PaymentProcessor(failingGateway);
+  await failingProcessor.pay(50);
+}
+
+test();

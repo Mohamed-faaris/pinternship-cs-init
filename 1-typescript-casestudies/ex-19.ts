@@ -330,3 +330,60 @@ Learn about IoC Containers & Advanced Dependency Management in TypeScript
 [Pinternship](https://sudarshansudarshan.github.io/pinternship/)
 # IoC Containers & Advanced Dependency Management
 */
+
+import "reflect-metadata";
+import { Service, Inject, Container } from "typedi";
+
+interface NewsSource {
+  fetchArticles(): Promise<string[]>;
+}
+
+@Service()
+class RSSFeedSource implements NewsSource {
+  async fetchArticles(): Promise<string[]> {
+    return ["RSS: Article 1", "RSS: Article 2"];
+  }
+}
+
+@Service()
+class APISource implements NewsSource {
+  async fetchArticles(): Promise<string[]> {
+    return ["API: Article A", "API: Article B"];
+  }
+}
+
+@Service()
+class NewsAggregator {
+  constructor(
+    @Inject(() => RSSFeedSource) private source: NewsSource
+  ) { }
+
+  async getLatestArticles() {
+    const articles = await this.source.fetchArticles();
+    articles.forEach(article => console.log(article));
+  }
+}
+
+class MockNewsSource implements NewsSource {
+  async fetchArticles(): Promise<string[]> {
+    return ["Mock: Test Article"];
+  }
+}
+
+// Test
+async function test() {
+  // Default with RSS
+  const aggregator1 = Container.get(NewsAggregator);
+  await aggregator1.getLatestArticles();
+
+  // Swap to API
+  Container.set(RSSFeedSource, new APISource());
+  const aggregator2 = Container.get(NewsAggregator);
+  await aggregator2.getLatestArticles();
+
+  // Test with mock
+  const mockAggregator = new NewsAggregator(new MockNewsSource());
+  await mockAggregator.getLatestArticles();
+}
+
+test();

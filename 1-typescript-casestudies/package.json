@@ -7,5 +7,9 @@
   "devDependencies": {
     "typescript": "^5",
     "@types/bun": "latest"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.2.2",
+    "typedi": "^0.10.0"
   }
 }
