@@ -1,4 +1,4 @@
-// Source: https://sudarshansudarshan.github.io/pinternship/case-studies/09-repository-pattern/
+// Source: https://sudarshansudarshan.github.io/vinternship/case-studies/09-repository-pattern/
 
 /*
 Problem Statement:
@@ -362,13 +362,13 @@ and controllers automatically-making your app even more modular, testable, and
 ready for growth!
 
 ## Additional Links
-- [Introduction](https://sudarshansudarshan.github.io/pinternship/intro/)
-- [Case Studies](https://sudarshansudarshan.github.io/pinternship/case-studies/)
-- [Projects](https://sudarshansudarshan.github.io/pinternship/projects/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/08-mvc-pattern/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/10-dependency-injection/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/08-mvc-pattern/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/10-dependency-injection/)
+- [Introduction](https://sudarshansudarshan.github.io/vinternship/intro/)
+- [Case Studies](https://sudarshansudarshan.github.io/vinternship/case-studies/)
+- [Projects](https://sudarshansudarshan.github.io/vinternship/projects/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/08-mvc-pattern/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/10-dependency-injection/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/08-mvc-pattern/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/10-dependency-injection/)
 # Repository Pattern
 
 Learn about Repository Pattern in Express
@@ -413,6 +413,6 @@ Learn about Repository Pattern in Express
 ...
 ## Additional Links
 ...
-[Pinternship](https://sudarshansudarshan.github.io/pinternship/)
+[vinternship](https://sudarshansudarshan.github.io/vinternship/)
 # Repository Pattern
 */

@@ -1,4 +1,4 @@
-// Source: https://sudarshansudarshan.github.io/pinternship/case-studies/07-request-validation/
+// Source: https://sudarshansudarshan.github.io/vinternship/case-studies/07-request-validation/
 
 /*
 Problem Statement:
@@ -300,13 +300,13 @@ Document validation rules for users and staff.
 the right people can submit or review applications!
 
 ## Additional Links
-- [Introduction](https://sudarshansudarshan.github.io/pinternship/intro/)
-- [Case Studies](https://sudarshansudarshan.github.io/pinternship/case-studies/)
-- [Projects](https://sudarshansudarshan.github.io/pinternship/projects/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/06-middleware/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/08-mvc-pattern/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/06-middleware/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/08-mvc-pattern/)
+- [Introduction](https://sudarshansudarshan.github.io/vinternship/intro/)
+- [Case Studies](https://sudarshansudarshan.github.io/vinternship/case-studies/)
+- [Projects](https://sudarshansudarshan.github.io/vinternship/projects/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/06-middleware/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/08-mvc-pattern/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/06-middleware/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/08-mvc-pattern/)
 # Request Validation
 
 Learn about Request Validation in Express
@@ -341,6 +341,6 @@ Learn about Request Validation in Express
 ...
 ## Additional Links
 ...
-[Pinternship](https://sudarshansudarshan.github.io/pinternship/)
+[vinternship](https://sudarshansudarshan.github.io/vinternship/)
 # Request Validation
 */

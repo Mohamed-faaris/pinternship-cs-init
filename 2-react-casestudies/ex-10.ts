@@ -1,4 +1,4 @@
-// Source: https://sudarshansudarshan.github.io/pinternship/case-studies/10-bundle-analysis/
+// Source: https://sudarshansudarshan.github.io/vinternship/case-studies/10-bundle-analysis/
 
 /*
 Problem Statement:
@@ -325,11 +325,11 @@ Always minify and compress production builds.
 # Bundle Analysis
 
 ## Additional Links
-- [Introduction](https://sudarshansudarshan.github.io/pinternship/intro/)
-- [Case Studies](https://sudarshansudarshan.github.io/pinternship/case-studies/)
-- [Projects](https://sudarshansudarshan.github.io/pinternship/projects/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/09-lazy-loading/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/09-lazy-loading/)
+- [Introduction](https://sudarshansudarshan.github.io/vinternship/intro/)
+- [Case Studies](https://sudarshansudarshan.github.io/vinternship/case-studies/)
+- [Projects](https://sudarshansudarshan.github.io/vinternship/projects/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/09-lazy-loading/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/09-lazy-loading/)
 # Bundle Analysis
 
 Learn about Bundle Analysis: Impact of types and libraries on bundle size
@@ -362,6 +362,6 @@ Learn about Bundle Analysis: Impact of types and libraries on bundle size
 ...
 ## Additional Links
 ...
-[Pinternship](https://sudarshansudarshan.github.io/pinternship/)
+[vinternship](https://sudarshansudarshan.github.io/vinternship/)
 # Bundle Analysis
 */

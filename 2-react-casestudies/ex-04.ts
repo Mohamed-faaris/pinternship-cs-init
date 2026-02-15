@@ -1,4 +1,4 @@
-// Source: https://sudarshansudarshan.github.io/pinternship/case-studies/04-state-management-in-react/
+// Source: https://sudarshansudarshan.github.io/vinternship/case-studies/04-state-management-in-react/
 
 /*
 Problem Statement:
@@ -441,13 +441,13 @@ Test stores independently from UI components.
 # State Management in React
 
 ## Additional Links
-- [Introduction](https://sudarshansudarshan.github.io/pinternship/intro/)
-- [Case Studies](https://sudarshansudarshan.github.io/pinternship/case-studies/)
-- [Projects](https://sudarshansudarshan.github.io/pinternship/projects/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/03-routing/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/05-testing-debugging-react-apps-with-typescript/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/03-routing/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/05-testing-debugging-react-apps-with-typescript/)
+- [Introduction](https://sudarshansudarshan.github.io/vinternship/intro/)
+- [Case Studies](https://sudarshansudarshan.github.io/vinternship/case-studies/)
+- [Projects](https://sudarshansudarshan.github.io/vinternship/projects/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/03-routing/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/05-testing-debugging-react-apps-with-typescript/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/03-routing/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/05-testing-debugging-react-apps-with-typescript/)
 # State Management in React
 
 Learn about State Management in React: Context Providers & Zustand (with
@@ -485,6 +485,6 @@ TypeScript)
 ...
 ## Additional Links
 ...
-[Pinternship](https://sudarshansudarshan.github.io/pinternship/)
+[vinternship](https://sudarshansudarshan.github.io/vinternship/)
 # State Management in React
 */

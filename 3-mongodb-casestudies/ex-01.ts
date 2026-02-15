@@ -1,4 +1,4 @@
-// Source: https://sudarshansudarshan.github.io/pinternship/case-studies/01-aggregation-framework/
+// Source: https://sudarshansudarshan.github.io/vinternship/case-studies/01-aggregation-framework/
 
 /*
 Problem Statement:
@@ -331,11 +331,11 @@ Optimize with indexes and by limiting unnecessary fields.
 # Aggregation Framework
 
 ## Additional Links
-- [Introduction](https://sudarshansudarshan.github.io/pinternship/intro/)
-- [Case Studies](https://sudarshansudarshan.github.io/pinternship/case-studies/)
-- [Projects](https://sudarshansudarshan.github.io/pinternship/projects/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/02-crud-operations/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/02-crud-operations/)
+- [Introduction](https://sudarshansudarshan.github.io/vinternship/intro/)
+- [Case Studies](https://sudarshansudarshan.github.io/vinternship/case-studies/)
+- [Projects](https://sudarshansudarshan.github.io/vinternship/projects/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/02-crud-operations/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/02-crud-operations/)
 # Aggregation Framework
 
 Learn about MongoDB Aggregation Framework: $match, $group, $project, and
@@ -367,6 +367,6 @@ Pipeline Stages
 ...
 ## Additional Links
 ...
-[Pinternship](https://sudarshansudarshan.github.io/pinternship/)
+[vinternship](https://sudarshansudarshan.github.io/vinternship/)
 # Aggregation Framework
 */

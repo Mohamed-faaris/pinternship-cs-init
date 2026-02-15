@@ -1,4 +1,4 @@
-// Source: https://sudarshansudarshan.github.io/pinternship/case-studies/01-tsx-typed-components/
+// Source: https://sudarshansudarshan.github.io/vinternship/case-studies/01-tsx-typed-components/
 
 /*
 Problem Statement:
@@ -224,7 +224,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 interface WrapperProps {
   children: React.ReactNode;
 }
-const Wrapper: React.FC<WrapperProps> = ({ children }) => <div>{children}</div>;
+const Wrapper: React.FC<WrapperProps> = ({ children }) => <div>{ children } </div>;
 
 ```
 
@@ -232,8 +232,10 @@ D. Typing Class Components
 
 1. Props and State Generics
 
-• `React.Component<Props, State>` gives full type safety. ```js interface AssetFormProps { onAdd: (asset:
-AssetCardProps) => void; } interface AssetFormState { name: string; symbol: string;
+• `React.Component<Props, State>` gives full type safety. ```js interface AssetFormProps {
+  onAdd: (asset:
+    AssetCardProps) => void;
+} interface AssetFormState { name: string; symbol: string;
 # TSX & Typed Components
 
 ## 4. Technical Deep Dive
@@ -241,29 +243,38 @@ AssetCardProps) => void; } interface AssetFormState { name: string; symbol: stri
 value: string; change: string; }
 
 
-class AssetForm extends React.Component<AssetFormProps, AssetFormState> { state:
-AssetFormState = { name: ‘’, symbol: ‘’, value: ‘’, change: ‘’ };
+class AssetForm extends React.Component<AssetFormProps, AssetFormState> {
+  state:
+    AssetFormState = { name: ‘’, symbol: ‘’, value: ‘’, change: ‘’ };
 
 
-handleChange = (e: React.ChangeEvent) => { this.setState({ [e.target.name]: e.target.value } as Pick<AssetFormState,
-keyof AssetFormState>); };
+  handleChange = (e: React.ChangeEvent) => {
+    this.setState({ [e.target.name]: e.target.value } as Pick<AssetFormState,
+      keyof AssetFormState>);
+  };
 
 
-handleSubmit = (e: React.FormEvent) => { e.preventDefault(); this.props.onAdd({
-name: this.state.name, symbol: this.state.symbol, value:
-parseFloat(this.state.value), change: parseFloat(this.state.change), onRemove: () => {} });
-this.setState({ name: ‘’, symbol: ‘’, value: ‘’, change: ‘’ }); };
+  handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault(); this.props.onAdd({
+      name: this.state.name, symbol: this.state.symbol, value:
+        parseFloat(this.state.value), change: parseFloat(this.state.change), onRemove: () => { }
+    });
+    this.setState({ name: ‘’, symbol: ‘’, value: ‘’, change: ‘’ });
+  };
 
 
-render() { return ( <form onSubmit={this.handleSubmit}> <input name=”name”
-value={this.state.name} onChange={this.handleChange} /> <input name=”symbol”
+  render() {
+    return (<form onSubmit= { this.handleSubmit } > <input name=”name”
+    value = { this.state.name } onChange = { this.handleChange } /> <input name=”symbol”
 # TSX & Typed Components
 
 ## 4. Technical Deep Dive
 
-value={this.state.symbol} onChange={this.handleChange} /> <input name=”value”
-value={this.state.value} onChange={this.handleChange} type=”number” /> <input
-name=”change” value={this.state.change} onChange={this.handleChange} type=”number” /> Add Asset </form> ); } }
+    value = { this.state.symbol } onChange = { this.handleChange } /> <input name=”value”
+    value = { this.state.value } onChange = { this.handleChange } type =”number” /> <input
+    name =”change” value = { this.state.change } onChange = { this.handleChange } type =”number” /> Add Asset </form > );
+  }
+}
 
 ```
  **E. Best Practices and Pitfalls**
@@ -285,9 +296,9 @@ interface Asset {
 
 ## 4. Technical Deep Dive
 
-  symbol: string;
-  value: number;
-  change: number;
+symbol: string;
+value: number;
+change: number;
 }
 interface AssetListProps {
   assets: Asset[];
@@ -295,13 +306,14 @@ interface AssetListProps {
 }
 const AssetList: React.FC<AssetListProps> = ({ assets, onRemove }) => (
   <ul>
-    {assets.map(a => (
-      <li key={a.symbol}>
-        {a.name} ({a.symbol}): ${a.value} ({a.change > 0 ? '+' : ''}{a.change}%)
-        <button onClick={() => onRemove(a.symbol)}>Remove</button>
+  {
+    assets.map(a => (
+      <li key= { a.symbol } >
+      { a.name }({ a.symbol }): ${ a.value }({ a.change > 0 ? '+' : '' }{ a.change } %)
+    < button onClick = {() => onRemove(a.symbol)}> Remove </button>
       </li>
     ))}
-  </ul>
+</ul>
 );
 
 ```
@@ -317,38 +329,38 @@ class AssetForm extends React.Component<AssetFormProps, AssetFormState> {
 
 ## 4. Technical Deep Dive
 
-  state: AssetFormState = { name: '', symbol: '', value: '', change: '' };
+state: AssetFormState = { name: '', symbol: '', value: '', change: '' };
 
-  handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    this.setState({ [e.target.name]: e.target.value } as Pick<AssetFormState, keyof AssetFormState>);
-  };
+handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  this.setState({ [e.target.name]: e.target.value } as Pick<AssetFormState, keyof AssetFormState>);
+};
 
-  handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    this.props.onAdd({
-      name: this.state.name,
-      symbol: this.state.symbol,
-      value: parseFloat(this.state.value),
-      change: parseFloat(this.state.change)
-    });
-    this.setState({ name: '', symbol: '', value: '', change: '' });
-  };
+handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+  this.props.onAdd({
+    name: this.state.name,
+    symbol: this.state.symbol,
+    value: parseFloat(this.state.value),
+    change: parseFloat(this.state.change)
+  });
+  this.setState({ name: '', symbol: '', value: '', change: '' });
+};
 
-  render() {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <input name="name" value={this.state.name} onChange={this.handleChange} />
-        <input name="symbol" value={this.state.symbol} onChange={this.handleChange} />
-        <input name="value" value={this.state.value} onChange={this.handleChange} type="number" />
+render() {
+  return (
+    <form onSubmit= { this.handleSubmit } >
+    <input name="name" value = { this.state.name } onChange = { this.handleChange } />
+      <input name="symbol" value = { this.state.symbol } onChange = { this.handleChange } />
+        <input name="value" value = { this.state.value } onChange = { this.handleChange } type = "number" />
 # TSX & Typed Components
 
 ## 4. Technical Deep Dive
 
-        <input name="change" value={this.state.change} onChange={this.handleChange} type="number" />
-        <button type="submit">Add Asset</button>
-      </form>
+    < input name = "change" value = { this.state.change } onChange = { this.handleChange } type = "number" />
+      <button type="submit" > Add Asset </button>
+        </form>
     );
-  }
+}
 }
 
 ```
@@ -424,11 +436,11 @@ Use `useReducer` for complex state logic.
 # TSX & Typed Components
 
 ## Additional Links
-- [Introduction](https://sudarshansudarshan.github.io/pinternship/intro/)
-- [Case Studies](https://sudarshansudarshan.github.io/pinternship/case-studies/)
-- [Projects](https://sudarshansudarshan.github.io/pinternship/projects/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/02-tsx-typed-components-type-safety/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/02-tsx-typed-components-type-safety/)
+- [Introduction](https://sudarshansudarshan.github.io/vinternship/intro/)
+- [Case Studies](https://sudarshansudarshan.github.io/vinternship/case-studies/)
+- [Projects](https://sudarshansudarshan.github.io/vinternship/projects/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/02-tsx-typed-components-type-safety/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/02-tsx-typed-components-type-safety/)
 # TSX & Typed Components
 
 Learn about TSX & Typed Components in React: Props Interfaces, State Typing,
@@ -454,6 +466,6 @@ Functional & Class Components
 ...
 ## Additional Links
 ...
-[Pinternship](https://sudarshansudarshan.github.io/pinternship/)
+[vinternship](https://sudarshansudarshan.github.io/vinternship/)
 # TSX & Typed Components
 */

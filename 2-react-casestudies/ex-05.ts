@@ -1,4 +1,4 @@
-// Source: https://sudarshansudarshan.github.io/pinternship/case-studies/05-testing-debugging-react-apps-with-typescript/
+// Source: https://sudarshansudarshan.github.io/vinternship/case-studies/05-testing-debugging-react-apps-with-typescript/
 
 /*
 Problem Statement:
@@ -362,13 +362,13 @@ Integrate tests and linting into CI/CD pipelines.
 # Testing & Debugging React Apps
 
 ## Additional Links
-- [Introduction](https://sudarshansudarshan.github.io/pinternship/intro/)
-- [Case Studies](https://sudarshansudarshan.github.io/pinternship/case-studies/)
-- [Projects](https://sudarshansudarshan.github.io/pinternship/projects/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/04-state-management-in-react/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/06-zustand-slices-and-modular-state-architecture/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/04-state-management-in-react/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/06-zustand-slices-and-modular-state-architecture/)
+- [Introduction](https://sudarshansudarshan.github.io/vinternship/intro/)
+- [Case Studies](https://sudarshansudarshan.github.io/vinternship/case-studies/)
+- [Projects](https://sudarshansudarshan.github.io/vinternship/projects/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/04-state-management-in-react/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/06-zustand-slices-and-modular-state-architecture/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/04-state-management-in-react/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/06-zustand-slices-and-modular-state-architecture/)
 # Testing & Debugging React Apps
 
 Learn about Testing & Debugging React Apps with TypeScript: Jest, Linting, and
@@ -398,6 +398,6 @@ Best Practices
 ...
 ## Additional Links
 ...
-[Pinternship](https://sudarshansudarshan.github.io/pinternship/)
+[vinternship](https://sudarshansudarshan.github.io/vinternship/)
 # Testing & Debugging React Apps
 */

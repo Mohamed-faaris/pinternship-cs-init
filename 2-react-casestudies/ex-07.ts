@@ -1,4 +1,4 @@
-// Source: https://sudarshansudarshan.github.io/pinternship/case-studies/07-advanced-state-management-with-zustand/
+// Source: https://sudarshansudarshan.github.io/vinternship/case-studies/07-advanced-state-management-with-zustand/
 
 /*
 Problem Statement:
@@ -379,13 +379,13 @@ Test stores and migrations independently.
 # Advanced State Management with Zustand
 
 ## Additional Links
-- [Introduction](https://sudarshansudarshan.github.io/pinternship/intro/)
-- [Case Studies](https://sudarshansudarshan.github.io/pinternship/case-studies/)
-- [Projects](https://sudarshansudarshan.github.io/pinternship/projects/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/06-zustand-slices-and-modular-state-architecture/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/08-memoization/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/06-zustand-slices-and-modular-state-architecture/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/08-memoization/)
+- [Introduction](https://sudarshansudarshan.github.io/vinternship/intro/)
+- [Case Studies](https://sudarshansudarshan.github.io/vinternship/case-studies/)
+- [Projects](https://sudarshansudarshan.github.io/vinternship/projects/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/06-zustand-slices-and-modular-state-architecture/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/08-memoization/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/06-zustand-slices-and-modular-state-architecture/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/08-memoization/)
 # Advanced State Management with Zustand
 
 Learn about Advanced State Management with Zustand: Middleware, Persistence, and
@@ -417,6 +417,6 @@ Async Patterns
 ...
 ## Additional Links
 ...
-[Pinternship](https://sudarshansudarshan.github.io/pinternship/)
+[vinternship](https://sudarshansudarshan.github.io/vinternship/)
 # Advanced State Management with Zustand
 */

@@ -1,4 +1,4 @@
-// Source: https://sudarshansudarshan.github.io/pinternship/case-studies/08-mvc-pattern/
+// Source: https://sudarshansudarshan.github.io/vinternship/case-studies/08-mvc-pattern/
 
 /*
 Problem Statement:
@@ -295,13 +295,13 @@ services.
 Learn to use automated dependency injection tools (like `tsyringe`) to manage complex systems effortlessly!
 
 ## Additional Links
-- [Introduction](https://sudarshansudarshan.github.io/pinternship/intro/)
-- [Case Studies](https://sudarshansudarshan.github.io/pinternship/case-studies/)
-- [Projects](https://sudarshansudarshan.github.io/pinternship/projects/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/07-request-validation/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/09-repository-pattern/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/07-request-validation/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/09-repository-pattern/)
+- [Introduction](https://sudarshansudarshan.github.io/vinternship/intro/)
+- [Case Studies](https://sudarshansudarshan.github.io/vinternship/case-studies/)
+- [Projects](https://sudarshansudarshan.github.io/vinternship/projects/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/07-request-validation/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/09-repository-pattern/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/07-request-validation/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/09-repository-pattern/)
 # MVC Pattern
 
 Learn about Building a Scalable Library System with MVC and Modular Design in
@@ -343,6 +343,6 @@ Express
 ...
 ## Additional Links
 ...
-[Pinternship](https://sudarshansudarshan.github.io/pinternship/)
+[vinternship](https://sudarshansudarshan.github.io/vinternship/)
 # MVC Pattern
 */

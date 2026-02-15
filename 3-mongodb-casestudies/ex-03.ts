@@ -1,4 +1,4 @@
-// Source: https://sudarshansudarshan.github.io/pinternship/case-studies/03-transactions/
+// Source: https://sudarshansudarshan.github.io/vinternship/case-studies/03-transactions/
 
 /*
 Problem Statement:
@@ -368,11 +368,11 @@ Monitor performance and adjust write concerns as needed.
 # Transactions
 
 ## Additional Links
-- [Introduction](https://sudarshansudarshan.github.io/pinternship/intro/)
-- [Case Studies](https://sudarshansudarshan.github.io/pinternship/case-studies/)
-- [Projects](https://sudarshansudarshan.github.io/pinternship/projects/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/02-crud-operations/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/02-crud-operations/)
+- [Introduction](https://sudarshansudarshan.github.io/vinternship/intro/)
+- [Case Studies](https://sudarshansudarshan.github.io/vinternship/case-studies/)
+- [Projects](https://sudarshansudarshan.github.io/vinternship/projects/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/02-crud-operations/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/02-crud-operations/)
 # Transactions
 
 Learn about MongoDB Transactions: Multi-document transactions for ACID
@@ -406,6 +406,6 @@ compliance.
 ...
 ## Additional Links
 ...
-[Pinternship](https://sudarshansudarshan.github.io/pinternship/)
+[vinternship](https://sudarshansudarshan.github.io/vinternship/)
 # Transactions
 */

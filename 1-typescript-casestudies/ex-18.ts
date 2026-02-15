@@ -1,4 +1,4 @@
-// Source: https://sudarshansudarshan.github.io/pinternship/case-studies/18-dependency-injection/
+// Source: https://sudarshansudarshan.github.io/vinternship/case-studies/18-dependency-injection/
 
 /*
 Problem Statement:
@@ -246,13 +246,13 @@ features.
 # Dependency Injection
 
 ## Additional Links
-- [Introduction](https://sudarshansudarshan.github.io/pinternship/intro/)
-- [Case Studies](https://sudarshansudarshan.github.io/pinternship/case-studies/)
-- [Projects](https://sudarshansudarshan.github.io/pinternship/projects/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/17-classes-access-modifiers/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/19-ioc-containers-advanced-dependency-management/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/17-classes-access-modifiers/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/19-ioc-containers-advanced-dependency-management/)
+- [Introduction](https://sudarshansudarshan.github.io/vinternship/intro/)
+- [Case Studies](https://sudarshansudarshan.github.io/vinternship/case-studies/)
+- [Projects](https://sudarshansudarshan.github.io/vinternship/projects/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/17-classes-access-modifiers/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/19-ioc-containers-advanced-dependency-management/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/17-classes-access-modifiers/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/19-ioc-containers-advanced-dependency-management/)
 # Dependency Injection
 
 Learn about Dependency Injection in TypeScript
@@ -283,7 +283,7 @@ Learn about Dependency Injection in TypeScript
 ...
 ## Additional Links
 ...
-[Pinternship](https://sudarshansudarshan.github.io/pinternship/)
+[vinternship](https://sudarshansudarshan.github.io/vinternship/)
 # Dependency Injection
 */
 

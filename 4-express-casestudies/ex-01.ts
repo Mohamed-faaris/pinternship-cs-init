@@ -1,4 +1,4 @@
-// Source: https://sudarshansudarshan.github.io/pinternship/case-studies/01-getting-started-with-express/
+// Source: https://sudarshansudarshan.github.io/vinternship/case-studies/01-getting-started-with-express/
 
 /*
 Problem Statement:
@@ -353,11 +353,11 @@ Run your server and test routes in a browser.
 Add new routes as your needs grow.
 
 ## Additional Links
-- [Introduction](https://sudarshansudarshan.github.io/pinternship/intro/)
-- [Case Studies](https://sudarshansudarshan.github.io/pinternship/case-studies/)
-- [Projects](https://sudarshansudarshan.github.io/pinternship/projects/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/02-organizing-your-express-project-for-scalability/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/02-organizing-your-express-project-for-scalability/)
+- [Introduction](https://sudarshansudarshan.github.io/vinternship/intro/)
+- [Case Studies](https://sudarshansudarshan.github.io/vinternship/case-studies/)
+- [Projects](https://sudarshansudarshan.github.io/vinternship/projects/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/02-organizing-your-express-project-for-scalability/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/02-organizing-your-express-project-for-scalability/)
 # Getting Started with Express
 
 Learn about Express: Bringing Greenfield Community Center Online
@@ -394,6 +394,6 @@ Learn about Express: Bringing Greenfield Community Center Online
 ...
 ## Additional Links
 ...
-[Pinternship](https://sudarshansudarshan.github.io/pinternship/)
+[vinternship](https://sudarshansudarshan.github.io/vinternship/)
 # Getting Started with Express
 */

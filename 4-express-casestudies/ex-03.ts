@@ -1,4 +1,4 @@
-// Source: https://sudarshansudarshan.github.io/pinternship/case-studies/03-http-methods-status-codes/
+// Source: https://sudarshansudarshan.github.io/vinternship/case-studies/03-http-methods-status-codes/
 
 /*
 Problem Statement:
@@ -360,13 +360,13 @@ Use headers for extra context when needed.
 Learn how to type requests and responses precisely, so your API never accepts bad data or sends confusing responses!
 
 ## Additional Links
-- [Introduction](https://sudarshansudarshan.github.io/pinternship/intro/)
-- [Case Studies](https://sudarshansudarshan.github.io/pinternship/case-studies/)
-- [Projects](https://sudarshansudarshan.github.io/pinternship/projects/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/02-organizing-your-express-project-for-scalability/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/04-request-response/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/02-organizing-your-express-project-for-scalability/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/04-request-response/)
+- [Introduction](https://sudarshansudarshan.github.io/vinternship/intro/)
+- [Case Studies](https://sudarshansudarshan.github.io/vinternship/case-studies/)
+- [Projects](https://sudarshansudarshan.github.io/vinternship/projects/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/02-organizing-your-express-project-for-scalability/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/04-request-response/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/02-organizing-your-express-project-for-scalability/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/04-request-response/)
 # HTTP Methods & Status Codes
 
 Learn about HTTP Methods & Status Codes in Express
@@ -393,6 +393,6 @@ Learn about HTTP Methods & Status Codes in Express
 ...
 ## Additional Links
 ...
-[Pinternship](https://sudarshansudarshan.github.io/pinternship/)
+[vinternship](https://sudarshansudarshan.github.io/vinternship/)
 # HTTP Methods & Status Codes
 */

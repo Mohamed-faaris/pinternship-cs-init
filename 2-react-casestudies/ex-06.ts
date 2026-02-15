@@ -1,4 +1,4 @@
-// Source: https://sudarshansudarshan.github.io/pinternship/case-studies/06-zustand-slices-and-modular-state-architecture/
+// Source: https://sudarshansudarshan.github.io/vinternship/case-studies/06-zustand-slices-and-modular-state-architecture/
 
 /*
 Problem Statement:
@@ -338,13 +338,13 @@ Document slice boundaries and responsibilities.
 # Zustand Slices and Modular State Architecture
 
 ## Additional Links
-- [Introduction](https://sudarshansudarshan.github.io/pinternship/intro/)
-- [Case Studies](https://sudarshansudarshan.github.io/pinternship/case-studies/)
-- [Projects](https://sudarshansudarshan.github.io/pinternship/projects/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/05-testing-debugging-react-apps-with-typescript/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/07-advanced-state-management-with-zustand/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/05-testing-debugging-react-apps-with-typescript/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/07-advanced-state-management-with-zustand/)
+- [Introduction](https://sudarshansudarshan.github.io/vinternship/intro/)
+- [Case Studies](https://sudarshansudarshan.github.io/vinternship/case-studies/)
+- [Projects](https://sudarshansudarshan.github.io/vinternship/projects/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/05-testing-debugging-react-apps-with-typescript/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/07-advanced-state-management-with-zustand/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/05-testing-debugging-react-apps-with-typescript/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/07-advanced-state-management-with-zustand/)
 # Zustand Slices and Modular State Architecture
 
 Learn about Zustand Slices & Modular State Architecture: Scaling a Collaborative
@@ -372,6 +372,6 @@ Design Platform
 ...
 ## Additional Links
 ...
-[Pinternship](https://sudarshansudarshan.github.io/pinternship/)
+[vinternship](https://sudarshansudarshan.github.io/vinternship/)
 # Zustand Slices and Modular State Architecture
 */

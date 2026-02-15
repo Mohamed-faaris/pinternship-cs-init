@@ -1,4 +1,4 @@
-// Source: https://sudarshansudarshan.github.io/pinternship/case-studies/17-classes-access-modifiers/
+// Source: https://sudarshansudarshan.github.io/vinternship/case-studies/17-classes-access-modifiers/
 
 /*
 Problem Statement:
@@ -410,13 +410,13 @@ flexible, reusable tools in TypeScript!
 # Classes & Access Modifiers
 
 ## Additional Links
-- [Introduction](https://sudarshansudarshan.github.io/pinternship/intro/)
-- [Case Studies](https://sudarshansudarshan.github.io/pinternship/case-studies/)
-- [Projects](https://sudarshansudarshan.github.io/pinternship/projects/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/16-design-patterns/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/18-dependency-injection/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/16-design-patterns/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/18-dependency-injection/)
+- [Introduction](https://sudarshansudarshan.github.io/vinternship/intro/)
+- [Case Studies](https://sudarshansudarshan.github.io/vinternship/case-studies/)
+- [Projects](https://sudarshansudarshan.github.io/vinternship/projects/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/16-design-patterns/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/18-dependency-injection/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/16-design-patterns/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/18-dependency-injection/)
 # Classes & Access Modifiers
 
 Learn about Classes & Access Modifiers in TypeScript
@@ -463,6 +463,6 @@ Learn about Classes & Access Modifiers in TypeScript
 ...
 ## Additional Links
 ...
-[Pinternship](https://sudarshansudarshan.github.io/pinternship/)
+[vinternship](https://sudarshansudarshan.github.io/vinternship/)
 # Classes & Access Modifiers
 */

@@ -1,4 +1,4 @@
-// Source: https://sudarshansudarshan.github.io/pinternship/case-studies/04-request-response/
+// Source: https://sudarshansudarshan.github.io/vinternship/case-studies/04-request-response/
 
 /*
 Problem Statement:
@@ -408,13 +408,13 @@ Test edge cases: invalid UUIDs, negative points, etc.
 Log unexpected errors but don’t expose details.
 
 ## Additional Links
-- [Introduction](https://sudarshansudarshan.github.io/pinternship/intro/)
-- [Case Studies](https://sudarshansudarshan.github.io/pinternship/case-studies/)
-- [Projects](https://sudarshansudarshan.github.io/pinternship/projects/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/03-http-methods-status-codes/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/05-routing-controllers/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/03-http-methods-status-codes/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/05-routing-controllers/)
+- [Introduction](https://sudarshansudarshan.github.io/vinternship/intro/)
+- [Case Studies](https://sudarshansudarshan.github.io/vinternship/case-studies/)
+- [Projects](https://sudarshansudarshan.github.io/vinternship/projects/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/03-http-methods-status-codes/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/05-routing-controllers/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/03-http-methods-status-codes/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/05-routing-controllers/)
 # Request and Response
 
 Learn about Request/Response in Express
@@ -441,6 +441,6 @@ Learn about Request/Response in Express
 ...
 ## Additional Links
 ...
-[Pinternship](https://sudarshansudarshan.github.io/pinternship/)
+[vinternship](https://sudarshansudarshan.github.io/vinternship/)
 # Request and Response
 */

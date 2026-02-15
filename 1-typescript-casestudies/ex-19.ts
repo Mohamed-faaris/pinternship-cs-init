@@ -1,4 +1,4 @@
-// Source: https://sudarshansudarshan.github.io/pinternship/case-studies/19-ioc-containers-advanced-dependency-management/
+// Source: https://sudarshansudarshan.github.io/vinternship/case-studies/19-ioc-containers-advanced-dependency-management/
 
 /*
 Problem Statement:
@@ -294,11 +294,11 @@ Swap implementations for testing or scaling.
 # IoC Containers & Advanced Dependency Management
 
 ## Additional Links
-- [Introduction](https://sudarshansudarshan.github.io/pinternship/intro/)
-- [Case Studies](https://sudarshansudarshan.github.io/pinternship/case-studies/)
-- [Projects](https://sudarshansudarshan.github.io/pinternship/projects/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/18-dependency-injection/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/18-dependency-injection/)
+- [Introduction](https://sudarshansudarshan.github.io/vinternship/intro/)
+- [Case Studies](https://sudarshansudarshan.github.io/vinternship/case-studies/)
+- [Projects](https://sudarshansudarshan.github.io/vinternship/projects/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/18-dependency-injection/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/18-dependency-injection/)
 # IoC Containers & Advanced Dependency Management
 
 Learn about IoC Containers & Advanced Dependency Management in TypeScript
@@ -327,7 +327,7 @@ Learn about IoC Containers & Advanced Dependency Management in TypeScript
 ...
 ## Additional Links
 ...
-[Pinternship](https://sudarshansudarshan.github.io/pinternship/)
+[vinternship](https://sudarshansudarshan.github.io/vinternship/)
 # IoC Containers & Advanced Dependency Management
 */
 

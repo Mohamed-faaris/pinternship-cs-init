@@ -1,4 +1,4 @@
-// Source: https://sudarshansudarshan.github.io/pinternship/case-studies/05-routing-controllers/
+// Source: https://sudarshansudarshan.github.io/vinternship/case-studies/05-routing-controllers/
 
 /*
 Problem Statement:
@@ -440,13 +440,13 @@ Learn how to add "checkpoints" (middleware) to your workflow-catching errors,
 logging actions, and ensuring every order is safe before it reaches the kitchen!
 
 ## Additional Links
-- [Introduction](https://sudarshansudarshan.github.io/pinternship/intro/)
-- [Case Studies](https://sudarshansudarshan.github.io/pinternship/case-studies/)
-- [Projects](https://sudarshansudarshan.github.io/pinternship/projects/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/04-request-response/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/06-middleware/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/04-request-response/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/06-middleware/)
+- [Introduction](https://sudarshansudarshan.github.io/vinternship/intro/)
+- [Case Studies](https://sudarshansudarshan.github.io/vinternship/case-studies/)
+- [Projects](https://sudarshansudarshan.github.io/vinternship/projects/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/04-request-response/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/06-middleware/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/04-request-response/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/06-middleware/)
 # Routing Controllers
 
 Learn about Routing Controllers, Middleware, and Request Validation in Express
@@ -477,6 +477,6 @@ Learn about Routing Controllers, Middleware, and Request Validation in Express
 ...
 ## Additional Links
 ...
-[Pinternship](https://sudarshansudarshan.github.io/pinternship/)
+[vinternship](https://sudarshansudarshan.github.io/vinternship/)
 # Routing Controllers
 */

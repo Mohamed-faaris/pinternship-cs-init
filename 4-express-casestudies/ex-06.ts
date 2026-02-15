@@ -1,4 +1,4 @@
-// Source: https://sudarshansudarshan.github.io/pinternship/case-studies/06-middleware/
+// Source: https://sudarshansudarshan.github.io/vinternship/case-studies/06-middleware/
 
 /*
 Problem Statement:
@@ -388,13 +388,13 @@ Next:Learn how to use validation libraries to ensure every discharge packet is
 complete and correct-no more missing signatures or incomplete instructions!
 
 ## Additional Links
-- [Introduction](https://sudarshansudarshan.github.io/pinternship/intro/)
-- [Case Studies](https://sudarshansudarshan.github.io/pinternship/case-studies/)
-- [Projects](https://sudarshansudarshan.github.io/pinternship/projects/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/05-routing-controllers/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/07-request-validation/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/05-routing-controllers/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/07-request-validation/)
+- [Introduction](https://sudarshansudarshan.github.io/vinternship/intro/)
+- [Case Studies](https://sudarshansudarshan.github.io/vinternship/case-studies/)
+- [Projects](https://sudarshansudarshan.github.io/vinternship/projects/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/05-routing-controllers/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/07-request-validation/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/05-routing-controllers/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/07-request-validation/)
 # Middleware
 
 Learn about Middleware in Express
@@ -423,6 +423,6 @@ Learn about Middleware in Express
 ...
 ## Additional Links
 ...
-[Pinternship](https://sudarshansudarshan.github.io/pinternship/)
+[vinternship](https://sudarshansudarshan.github.io/vinternship/)
 # Middleware
 */

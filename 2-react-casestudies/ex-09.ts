@@ -1,4 +1,4 @@
-// Source: https://sudarshansudarshan.github.io/pinternship/case-studies/09-lazy-loading/
+// Source: https://sudarshansudarshan.github.io/vinternship/case-studies/09-lazy-loading/
 
 /*
 Problem Statement:
@@ -337,13 +337,13 @@ Optimize chunk sizes and analyze bundles with Webpack/Vite tools.
 # Lazy Loading
 
 ## Additional Links
-- [Introduction](https://sudarshansudarshan.github.io/pinternship/intro/)
-- [Case Studies](https://sudarshansudarshan.github.io/pinternship/case-studies/)
-- [Projects](https://sudarshansudarshan.github.io/pinternship/projects/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/08-memoization/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/10-bundle-analysis/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/08-memoization/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/10-bundle-analysis/)
+- [Introduction](https://sudarshansudarshan.github.io/vinternship/intro/)
+- [Case Studies](https://sudarshansudarshan.github.io/vinternship/case-studies/)
+- [Projects](https://sudarshansudarshan.github.io/vinternship/projects/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/08-memoization/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/10-bundle-analysis/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/08-memoization/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/10-bundle-analysis/)
 # Lazy Loading
 
 Learn about Lazy Loading & Code Splitting in React: Dynamic Imports for
@@ -377,6 +377,6 @@ Performance
 ...
 ## Additional Links
 ...
-[Pinternship](https://sudarshansudarshan.github.io/pinternship/)
+[vinternship](https://sudarshansudarshan.github.io/vinternship/)
 # Lazy Loading
 */

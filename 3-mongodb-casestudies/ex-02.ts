@@ -1,4 +1,4 @@
-// Source: https://sudarshansudarshan.github.io/pinternship/case-studies/02-crud-operations/
+// Source: https://sudarshansudarshan.github.io/vinternship/case-studies/02-crud-operations/
 
 /*
 Problem Statement:
@@ -332,13 +332,13 @@ Handle errors and check operation results.
 # CRUD Operations
 
 ## Additional Links
-- [Introduction](https://sudarshansudarshan.github.io/pinternship/intro/)
-- [Case Studies](https://sudarshansudarshan.github.io/pinternship/case-studies/)
-- [Projects](https://sudarshansudarshan.github.io/pinternship/projects/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/01-aggregation-framework/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/03-transactions/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/01-aggregation-framework/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/03-transactions/)
+- [Introduction](https://sudarshansudarshan.github.io/vinternship/intro/)
+- [Case Studies](https://sudarshansudarshan.github.io/vinternship/case-studies/)
+- [Projects](https://sudarshansudarshan.github.io/vinternship/projects/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/01-aggregation-framework/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/03-transactions/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/01-aggregation-framework/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/03-transactions/)
 # CRUD Operations
 
 Learn about MongoDB CRUD Operations: insertOne, find, updateOne, deleteOne
@@ -385,6 +385,6 @@ Learn about MongoDB CRUD Operations: insertOne, find, updateOne, deleteOne
 ...
 ## Additional Links
 ...
-[Pinternship](https://sudarshansudarshan.github.io/pinternship/)
+[vinternship](https://sudarshansudarshan.github.io/vinternship/)
 # CRUD Operations
 */

@@ -1,4 +1,4 @@
-// Source: https://sudarshansudarshan.github.io/pinternship/case-studies/08-memoization/
+// Source: https://sudarshansudarshan.github.io/vinternship/case-studies/08-memoization/
 
 /*
 Problem Statement:
@@ -356,13 +356,13 @@ Avoid memoizing everything—measure before optimizing.
 # Memoization
 
 ## Additional Links
-- [Introduction](https://sudarshansudarshan.github.io/pinternship/intro/)
-- [Case Studies](https://sudarshansudarshan.github.io/pinternship/case-studies/)
-- [Projects](https://sudarshansudarshan.github.io/pinternship/projects/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/07-advanced-state-management-with-zustand/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/09-lazy-loading/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/07-advanced-state-management-with-zustand/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/09-lazy-loading/)
+- [Introduction](https://sudarshansudarshan.github.io/vinternship/intro/)
+- [Case Studies](https://sudarshansudarshan.github.io/vinternship/case-studies/)
+- [Projects](https://sudarshansudarshan.github.io/vinternship/projects/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/07-advanced-state-management-with-zustand/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/09-lazy-loading/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/07-advanced-state-management-with-zustand/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/09-lazy-loading/)
 # Memoization
 
 Learn about Memoization in React: useMemo, useCallback, and React.memo
@@ -391,6 +391,6 @@ Learn about Memoization in React: useMemo, useCallback, and React.memo
 ...
 ## Additional Links
 ...
-[Pinternship](https://sudarshansudarshan.github.io/pinternship/)
+[vinternship](https://sudarshansudarshan.github.io/vinternship/)
 # Memoization
 */

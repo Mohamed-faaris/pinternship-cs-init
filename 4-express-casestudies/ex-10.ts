@@ -1,4 +1,4 @@
-// Source: https://sudarshansudarshan.github.io/pinternship/case-studies/10-dependency-injection/
+// Source: https://sudarshansudarshan.github.io/vinternship/case-studies/10-dependency-injection/
 
 /*
 Problem Statement:
@@ -435,9 +435,9 @@ Your Turn!
 • Reset the container between tests to avoid leaks
 
 ## Additional Links
-- [Introduction](https://sudarshansudarshan.github.io/pinternship/intro/)
-- [Case Studies](https://sudarshansudarshan.github.io/pinternship/case-studies/)
-- [Projects](https://sudarshansudarshan.github.io/pinternship/projects/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/09-repository-pattern/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/09-repository-pattern/)
+- [Introduction](https://sudarshansudarshan.github.io/vinternship/intro/)
+- [Case Studies](https://sudarshansudarshan.github.io/vinternship/case-studies/)
+- [Projects](https://sudarshansudarshan.github.io/vinternship/projects/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/09-repository-pattern/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/09-repository-pattern/)
 */

@@ -1,4 +1,4 @@
-// Source: https://sudarshansudarshan.github.io/pinternship/case-studies/02-tsx-typed-components-type-safety/
+// Source: https://sudarshansudarshan.github.io/vinternship/case-studies/02-tsx-typed-components-type-safety/
 
 /*
 Problem Statement:
@@ -400,13 +400,13 @@ Audit type definitions with `tsc --noEmit`.
 # TSX & Typed Components: Mastering Type Safety
 
 ## Additional Links
-- [Introduction](https://sudarshansudarshan.github.io/pinternship/intro/)
-- [Case Studies](https://sudarshansudarshan.github.io/pinternship/case-studies/)
-- [Projects](https://sudarshansudarshan.github.io/pinternship/projects/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/01-tsx-typed-components/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/03-routing/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/01-tsx-typed-components/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/03-routing/)
+- [Introduction](https://sudarshansudarshan.github.io/vinternship/intro/)
+- [Case Studies](https://sudarshansudarshan.github.io/vinternship/case-studies/)
+- [Projects](https://sudarshansudarshan.github.io/vinternship/projects/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/01-tsx-typed-components/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/03-routing/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/01-tsx-typed-components/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/03-routing/)
 # TSX & Typed Components: Mastering Type Safety
 
 Learn about TSX & Typed Components: Mastering Type Safety in React
@@ -433,6 +433,6 @@ Learn about TSX & Typed Components: Mastering Type Safety in React
 ...
 ## Additional Links
 ...
-[Pinternship](https://sudarshansudarshan.github.io/pinternship/)
+[vinternship](https://sudarshansudarshan.github.io/vinternship/)
 # TSX & Typed Components: Mastering Type Safety
 */

@@ -1,4 +1,4 @@
-// Source: https://sudarshansudarshan.github.io/pinternship/case-studies/02-organizing-your-express-project-for-scalability/
+// Source: https://sudarshansudarshan.github.io/vinternship/case-studies/02-organizing-your-express-project-for-scalability/
 
 /*
 Problem Statement:
@@ -325,13 +325,13 @@ Keep `app.js` focused on setup and configuration.
 Test new features as you add them.
 
 ## Additional Links
-- [Introduction](https://sudarshansudarshan.github.io/pinternship/intro/)
-- [Case Studies](https://sudarshansudarshan.github.io/pinternship/case-studies/)
-- [Projects](https://sudarshansudarshan.github.io/pinternship/projects/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/01-getting-started-with-express/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/03-http-methods-status-codes/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/01-getting-started-with-express/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/03-http-methods-status-codes/)
+- [Introduction](https://sudarshansudarshan.github.io/vinternship/intro/)
+- [Case Studies](https://sudarshansudarshan.github.io/vinternship/case-studies/)
+- [Projects](https://sudarshansudarshan.github.io/vinternship/projects/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/01-getting-started-with-express/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/03-http-methods-status-codes/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/01-getting-started-with-express/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/03-http-methods-status-codes/)
 # Organizing Your Express Project
 
 Learn about Organizing Your Express Project for scalability
@@ -360,6 +360,6 @@ Learn about Organizing Your Express Project for scalability
 ...
 ## Additional Links
 ...
-[Pinternship](https://sudarshansudarshan.github.io/pinternship/)
+[vinternship](https://sudarshansudarshan.github.io/vinternship/)
 # Organizing Your Express Project
 */

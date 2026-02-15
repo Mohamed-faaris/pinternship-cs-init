@@ -1,4 +1,4 @@
-// Source: https://sudarshansudarshan.github.io/pinternship/case-studies/03-routing/
+// Source: https://sudarshansudarshan.github.io/vinternship/case-studies/03-routing/
 
 /*
 Problem Statement:
@@ -215,7 +215,7 @@ const AppointmentDetails: React.FC = () => {
       <h1>Patient: {patientId}</h1>
       <h2>Appointment: {apptId}</h2>
       {/* Fetch and display appointment details */}
-    </div>
+</div>
   );
 };
 
@@ -229,7 +229,7 @@ C. Navigating with Typed Params
 import { Link } from 'react-router-dom';
 
 const PatientRow: React.FC<{ patientId: string }> = ({ patientId }) => (
-  <Link to={`/patients/${patientId}/appointments/123`}>View Appointment 123</Link>
+  <Link to= {`/patients/${patientId}/appointments/123`}> View Appointment 123 </Link>
 );
 
 ```
@@ -243,7 +243,7 @@ import { route, useTypedParams } from "react-router-typesafe-routes";
 const routes = route({ patient: route({ path: "patients/:patientId" }) });
 # Routing
 
-## 5. Step-by-Step Data Modeling & Code Walkthrough
+## 5. Step - by - Step Data Modeling & Code Walkthrough
 
 // In component:
 const { patientId } = useTypedParams(routes.patient);
@@ -264,7 +264,7 @@ const params = ROUTES["/patients/:patientId/appointments/:appointmentId"].path.u
 Your Turn!
 
 1. 
-Define a route `/doctors/:doctorId/patients/:patientId` and a `DoctorPatientDetails` component.
+Define a route `/ doctors /: doctorId / patients /: patientId` and a `DoctorPatientDetails` component.
 2. 
 Use a typed interface for params and extract them in the component.
 3. 
@@ -289,7 +289,7 @@ as parameters.
 ## 8. Optional: Programmer’s Workflow Checklist
 
 • 
-Define route params in the path using `:param`.
+Define route params in the path using `: param`.
 • 
 Create a TypeScript interface for param types.
 • 
@@ -304,13 +304,13 @@ Consider helper libraries for large/complex route configs.
 # Routing
 
 ## Additional Links
-- [Introduction](https://sudarshansudarshan.github.io/pinternship/intro/)
-- [Case Studies](https://sudarshansudarshan.github.io/pinternship/case-studies/)
-- [Projects](https://sudarshansudarshan.github.io/pinternship/projects/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/02-tsx-typed-components-type-safety/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/04-state-management-in-react/)
-- [←](https://sudarshansudarshan.github.io/pinternship/case-studies/02-tsx-typed-components-type-safety/)
-- [→](https://sudarshansudarshan.github.io/pinternship/case-studies/04-state-management-in-react/)
+- [Introduction](https://sudarshansudarshan.github.io/vinternship/intro/)
+- [Case Studies](https://sudarshansudarshan.github.io/vinternship/case-studies/)
+- [Projects](https://sudarshansudarshan.github.io/vinternship/projects/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/02-tsx-typed-components-type-safety/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/04-state-management-in-react/)
+- [←](https://sudarshansudarshan.github.io/vinternship/case-studies/02-tsx-typed-components-type-safety/)
+- [→](https://sudarshansudarshan.github.io/vinternship/case-studies/04-state-management-in-react/)
 # Routing
 
 Learn about Routing in React: Type-Safe Route Parameters with React Router &
@@ -344,6 +344,6 @@ TypeScript
 ...
 ## Additional Links
 ...
-[Pinternship](https://sudarshansudarshan.github.io/pinternship/)
+[vinternship](https://sudarshansudarshan.github.io/vinternship/)
 # Routing
 */
