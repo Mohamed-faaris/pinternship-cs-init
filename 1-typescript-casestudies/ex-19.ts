@@ -54,3 +54,10 @@ async function test() {
 }
 
 test();
+
+// ❯ bun tsr ex - 19.ts
+
+// $ timeout - k 3s 10s sh - c 'bun x tsc --noEmit && bun run "$1"' -- "ex-19.ts"
+// ["RSS: Article 1", "RSS: Article 2"]
+// ["RSS: Article 1", "RSS: Article 2"]
+// ["RSS: Article 1", "RSS: Article 2"]
