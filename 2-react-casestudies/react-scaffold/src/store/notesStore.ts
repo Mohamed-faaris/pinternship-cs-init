@@ -1,5 +1,6 @@
 import { create } from 'zustand';
-import { devtools, immer } from 'zustand/middleware';
+import { devtools } from 'zustand/middleware';
+import { immer } from 'zustand/middleware/immer';
 
 interface HistoryEntry {
   noteId: string;
@@ -7,8 +8,13 @@ interface HistoryEntry {
   timestamp: number;
 }
 
+interface Note {
+  id: string;
+  text: string;
+}
+
 interface NotesState {
-  notes: { id: string; text: string }[];
+  notes: Note[];
   history: HistoryEntry[];
   addNote: (id: string, text: string) => void;
   updateNote: (id: string, text: string) => void;
@@ -22,7 +28,7 @@ const useNotesStore = create<NotesState>()(
     immer((set) => ({
       notes: [],
       history: [],
-      addNote: (id, text) =>
+      addNote: (id: string, text: string) =>
         set((state) => {
           state.notes.push({ id, text });
           state.history.push({
@@ -31,9 +37,9 @@ const useNotesStore = create<NotesState>()(
             timestamp: Date.now(),
           });
         }),
-      updateNote: (id, text) =>
+      updateNote: (id: string, text: string) =>
         set((state) => {
-          const note = state.notes.find((n) => n.id === id);
+          const note = state.notes.find((n: Note) => n.id === id);
           if (note) {
             note.text = text;
             state.history.push({
@@ -43,16 +49,16 @@ const useNotesStore = create<NotesState>()(
             });
           }
         }),
-      deleteNote: (id) =>
+      deleteNote: (id: string) =>
         set((state) => {
-          state.notes = state.notes.filter((n) => n.id !== id);
+          state.notes = state.notes.filter((n: Note) => n.id !== id);
           state.history.push({
             noteId: id,
             action: 'delete',
             timestamp: Date.now(),
           });
         }),
-      addHistoryEntry: (noteId, action) =>
+      addHistoryEntry: (noteId: string, action: string) =>
         set((state) => {
           state.history.push({
             noteId,

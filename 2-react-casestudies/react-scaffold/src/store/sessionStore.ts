@@ -13,6 +13,12 @@ interface SessionState {
   clearSession: () => void;
 }
 
+interface PersistedSession {
+  userId?: string;
+  token?: string;
+  role?: UserRole;
+}
+
 const useSessionStore = create<SessionState>()(
   persist(
     (set) => ({
@@ -20,20 +26,25 @@ const useSessionStore = create<SessionState>()(
       token: '',
       expiresAt: 0,
       role: 'user',
-      setSession: (userId, token, expiresAt) => set({ userId, token, expiresAt }),
-      setRole: (role) => set({ role }),
+      setSession: (userId: string, token: string, expiresAt: number) => 
+        set({ userId, token, expiresAt }),
+      setRole: (role: UserRole) => set({ role }),
       clearSession: () => set({ userId: '', token: '', expiresAt: 0, role: 'user' }),
     }),
     {
       name: 'session-storage',
       storage: createJSONStorage(() => localStorage),
-      partialize: (state) => ({ userId: state.userId, token: state.token }),
+      partialize: (state: SessionState): PersistedSession => ({ 
+        userId: state.userId, 
+        token: state.token 
+      }),
       version: 2,
-      migrate: (persisted, version) => {
+      migrate: (persisted: unknown, version: number): PersistedSession => {
+        const data = persisted as PersistedSession;
         if (version < 2) {
-          return { ...persisted, role: 'user' as UserRole };
+          return { ...data, role: 'user' as UserRole };
         }
-        return persisted;
+        return data;
       },
     }
   )
