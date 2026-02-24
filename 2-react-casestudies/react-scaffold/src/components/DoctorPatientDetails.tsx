@@ -1,12 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 
-interface DoctorPatientParams {
-  doctorId: string;
-  patientId: string;
-}
-
 function DoctorPatientDetails() {
-  const { doctorId, patientId } = useParams<DoctorPatientParams>();
+  const { doctorId, patientId } = useParams<{ doctorId: string; patientId: string }>();
 
   if (!doctorId || !patientId) {
     return <div>Missing or invalid parameters</div>;
