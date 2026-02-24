@@ -20,3 +20,52 @@ export interface AssetEditorState {
   value: string;
   change: string;
 }
+
+export type Currency = 'USD' | 'EUR';
+
+export interface Transaction {
+  id: string;
+  amount: number;
+  currency: Currency;
+  date: Date;
+}
+
+export interface TransactionListProps {
+  transactions: Transaction[];
+  onSelect: (id: string) => void;
+}
+
+export interface TransactionFormProps {
+  onSubmit: (amount: number, currency: Currency) => void;
+}
+
+export interface TransactionFormState {
+  amount: string;
+  currency: Currency;
+}
+
+export interface IncomeEntry {
+  id: string;
+  amount: number;
+  currency: Currency;
+}
+
+export interface ExpenseEntry {
+  id: string;
+  amount: number;
+  currency: Currency;
+}
+
+export interface BudgetState {
+  balance: number;
+  income: IncomeEntry[];
+  expenses: ExpenseEntry[];
+}
+
+export type BudgetAction =
+  | { type: 'addIncome'; entry: IncomeEntry }
+  | { type: 'addExpense'; entry: ExpenseEntry };
+
+export interface BudgetTrackerProps {
+  initialBalance: number;
+}

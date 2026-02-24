@@ -1,5 +1,5 @@
 import React from 'react';
-import { AssetEditorProps, AssetEditorState, Asset } from '../types';
+import type { AssetEditorProps, AssetEditorState, Asset } from '../types';
 
 class AssetEditor extends React.Component<AssetEditorProps, AssetEditorState> {
   state: AssetEditorState = {

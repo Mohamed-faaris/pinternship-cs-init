@@ -1,4 +1,4 @@
-import { PortfolioSummaryProps, Asset } from '../types';
+import type { PortfolioSummaryProps, Asset } from '../types';
 
 function PortfolioSummary({ assets, onRemove }: PortfolioSummaryProps) {
   const totalValue = assets.reduce((sum: number, asset: Asset) => sum + asset.value, 0);
