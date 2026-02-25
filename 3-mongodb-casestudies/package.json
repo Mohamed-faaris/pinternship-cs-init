@@ -1,0 +1,10 @@
+{
+  "name": "mongodb-casestudies",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "csv-parse": "^5.6.0",
+    "dotenv": "^17.3.1",
+    "mongodb": "^6.21.0"
+  }
+}
