@@ -23,7 +23,15 @@ async function loadMovies() {
     const records = parse(csvData, {
       columns: true,
       skip_empty_lines: true,
-    });
+    }).map(record => ({
+      ...record,
+      year: parseInt(record.year, 10),
+      rating: parseFloat(record.rating),
+      views: parseInt(record.views, 10),
+      budget_millions: parseFloat(record.budget_millions),
+      box_office_millions: parseFloat(record.box_office_millions),
+      duration_minutes: parseInt(record.duration_minutes, 10),
+    }));
 
     console.log(`Parsed ${records.length} records from CSV`);
 

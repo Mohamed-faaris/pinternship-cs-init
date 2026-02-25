@@ -15,7 +15,31 @@ Challenge (Interactive - "Your Turn"):
 
 1. Write an aggregation pipeline to find average rating per genre in 2024, including only genres with >10,000 total views. Output should show genre, average rating (rounded), and total views.
 */
+import { MongoClient } from 'mongodb';
+import dotenv from 'dotenv';
 
+dotenv.config();
+
+const mongoUri = process.env.MONGODB_URI as string;
+if(!mongoUri) {
+  console.error('MONGODB_URI not found in environment variables');
+  process.exit(1);
+}
+
+const dbName = 'movieFlix';
+const collectionName = 'movies';
+
+async function runAggregation() {
+  const client = new MongoClient(mongoUri);
+  await client.connect()
+  
+  const db = client.db(dbName);
+  const collection = db.collection(collectionName);
+
+  const pipeline = [
+    $match:{year:2024}
+  ]
+}
 /*
 # Aggregation Framework
 
