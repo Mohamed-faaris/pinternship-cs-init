@@ -20,10 +20,10 @@ async function loadMovies() {
     const collection = db.collection(collectionName);
 
     const csvData = fs.readFileSync('movies_dataset_100.csv', 'utf-8');
-    const records = parse(csvData, {
+    const records: any[] = parse(csvData, {
       columns: true,
       skip_empty_lines: true,
-    }).map(record => ({
+    }).map((record: any) => ({
       ...record,
       year: parseInt(record.year, 10),
       rating: parseFloat(record.rating),
