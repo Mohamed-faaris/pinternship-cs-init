@@ -2,6 +2,10 @@
   "name": "mongodb-casestudies",
   "version": "1.0.0",
   "type": "module",
+  "scripts": {
+    "tsr": "timeout -k 3s 10s sh -c 'bun x tsc --noEmit && bun run \"$1\"' --",
+    "load-movies": "bun run load-movies.ts"
+  },
   "dependencies": {
     "@types/node": "^25.3.0",
     "csv-parse": "^5.6.0",
