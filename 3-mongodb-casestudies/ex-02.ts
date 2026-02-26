@@ -11,6 +11,14 @@ if (!mongoUri) {
 
 const dbName = "catalog";
 const collectionName = "products";
+
+interface Product {
+  name: string;
+  cuisine: string;
+  price: number;
+  tags: string[];
+  available: boolean;
+}
 async function main() {
   const client = new MongoClient(mongoUri);
   try {
@@ -18,7 +26,7 @@ async function main() {
     console.log("Connected to MongoDB");
 
     const db = client.db(dbName);
-    const collection = db.collection(collectionName);
+    const collection = db.collection<Product>(collectionName);
 
     //AI generated product data
     const sampleProducts = [
@@ -57,24 +65,252 @@ async function main() {
     ];
     await collection.insertMany(sampleProducts);
 
-    //exercise 2
-    collection.insertOne({
+    // exercise 2
+    await collection.insertOne({
+      name: "Spring Rolls",
       cuisine: "Asian",
-      price: 9.50,
+      price: 9.5,
       tags: ["vegan", "gluten-free"],
-      available: true
-    })
+      available: true,
+    });
 
-     const results0 = await collection.find({price: {$lt: 12}}, {name: 1, price: 1}).toArray();
-     
-     const results1 = await collection.updateOne({ name:"Tofu Buddha Bowl"}, {$set: {price: 11.00}, $push: {tags: "popular"}});
-     
-     const results2 = await collection.deleteOne({name: "Old Special Soup "});
-     
-     console.log({results0, results1, results2});
+    const results0 = await collection
+      .find({ price: { $lt: 12 } }, { projection: { name: 1, price: 1 } })
+      .toArray();
+
+    const results1 = await collection.updateOne(
+      { name: "Tofu Buddha Bowl" },
+      { $set: { price: 11.0 }, $push: { tags: { $each: ["popular"] } } }
+    );
+
+    const results2 = await collection.deleteOne({ name: "Old Special Soup " });
+
+    console.log({ results0, results1, results2 });
   } catch (error) {
     console.error("Error:", error);
   } finally {
     await client.close();
   }
 }
+
+main().catch((err) => console.error(err));
+/*[dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+Connected to MongoDB
+{
+  results0: [
+    {
+      _id: new ObjectId('699ffb98f79735836251a03e'),
+      name: "Pad Thai",
+      price: 9.5,
+    }, {
+      _id: new ObjectId('699ffb98f79735836251a03f'),
+      name: "Green Curry",
+      price: 10,
+    }, {
+      _id: new ObjectId('699ffb98f79735836251a041'),
+      name: "Kimchi Fried Rice",
+      price: 8.5,
+    }, {
+      _id: new ObjectId('699ffb98f79735836251a042'),
+      name: "Margherita Pizza",
+      price: 11,
+    }, {
+      _id: new ObjectId('699ffb98f79735836251a045'),
+      name: "Tiramisu",
+      price: 6,
+    }, {
+      _id: new ObjectId('699ffb98f79735836251a046'),
+      name: "Burger",
+      price: 10.5,
+    }, {
+      _id: new ObjectId('699ffb98f79735836251a047'),
+      name: "Fries",
+      price: 4,
+    }, {
+      _id: new ObjectId('699ffb98f79735836251a048'),
+      name: "Hot Dog",
+      price: 7,
+    }, {
+      _id: new ObjectId('699ffb98f79735836251a049'),
+      name: "Milkshake",
+      price: 5.5,
+    }, {
+      _id: new ObjectId('699ffb98f79735836251a04a'),
+      name: "Tacos",
+      price: 9,
+    }, {
+      _id: new ObjectId('699ffb98f79735836251a04b'),
+      name: "Enchiladas",
+      price: 11,
+    }, {
+      _id: new ObjectId('699ffb98f79735836251a04c'),
+      name: "Quesadilla",
+      price: 8,
+    }, {
+      _id: new ObjectId('699ffb98f79735836251a04d'),
+      name: "Guacamole",
+      price: 6,
+    }, {
+      _id: new ObjectId('699ffb98f79735836251a04e'),
+      name: "Falafel Wrap",
+      price: 8.5,
+    }, {
+      _id: new ObjectId('699ffb98f79735836251a04f'),
+      name: "Hummus Plate",
+      price: 7,
+    }, {
+      _id: new ObjectId('699ffb98f79735836251a051'),
+      name: "Baklava",
+      price: 5,
+    }, {
+      _id: new ObjectId('699ffb98f79735836251a052'),
+      name: "Pad See Ew",
+      price: 9,
+    }, {
+      _id: new ObjectId('699ffb98f79735836251a053'),
+      name: "Ramen",
+      price: 11,
+    }, {
+      _id: new ObjectId('699ffb98f79735836251a057'),
+      name: "Chicken Wings",
+      price: 9,
+    }, {
+      _id: new ObjectId('699ffb98f79735836251a058'),
+      name: "Burrito",
+      price: 10,
+    }, {
+      _id: new ObjectId('699ffb98f79735836251a059'),
+      name: "Chili",
+      price: 8.5,
+    }, {
+      _id: new ObjectId('699ffb98f79735836251a05a'),
+      name: "Kebab",
+      price: 10.5,
+    }, {
+      _id: new ObjectId('699ffb98f79735836251a05b'),
+      name: "Tabouli",
+      price: 7.5,
+    }, {
+      _id: new ObjectId('699ffb98f79735836251a05c'),
+      name: "Tofu Buddha Bowl",
+      price: 11,
+    }, {
+      _id: new ObjectId('699ffb99f79735836251a05e'),
+      name: "Spring Rolls",
+      price: 9.5,
+    }, {
+      _id: new ObjectId('699ffbb20f893920f901bcfb'),
+      name: "Pad Thai",
+      price: 9.5,
+    }, {
+      _id: new ObjectId('699ffbb20f893920f901bcfc'),
+      name: "Green Curry",
+      price: 10,
+    }, {
+      _id: new ObjectId('699ffbb20f893920f901bcfe'),
+      name: "Kimchi Fried Rice",
+      price: 8.5,
+    }, {
+      _id: new ObjectId('699ffbb20f893920f901bcff'),
+      name: "Margherita Pizza",
+      price: 11,
+    }, {
+      _id: new ObjectId('699ffbb20f893920f901bd02'),
+      name: "Tiramisu",
+      price: 6,
+    }, {
+      _id: new ObjectId('699ffbb20f893920f901bd03'),
+      name: "Burger",
+      price: 10.5,
+    }, {
+      _id: new ObjectId('699ffbb20f893920f901bd04'),
+      name: "Fries",
+      price: 4,
+    }, {
+      _id: new ObjectId('699ffbb20f893920f901bd05'),
+      name: "Hot Dog",
+      price: 7,
+    }, {
+      _id: new ObjectId('699ffbb20f893920f901bd06'),
+      name: "Milkshake",
+      price: 5.5,
+    }, {
+      _id: new ObjectId('699ffbb20f893920f901bd07'),
+      name: "Tacos",
+      price: 9,
+    }, {
+      _id: new ObjectId('699ffbb20f893920f901bd08'),
+      name: "Enchiladas",
+      price: 11,
+    }, {
+      _id: new ObjectId('699ffbb20f893920f901bd09'),
+      name: "Quesadilla",
+      price: 8,
+    }, {
+      _id: new ObjectId('699ffbb20f893920f901bd0a'),
+      name: "Guacamole",
+      price: 6,
+    }, {
+      _id: new ObjectId('699ffbb20f893920f901bd0b'),
+      name: "Falafel Wrap",
+      price: 8.5,
+    }, {
+      _id: new ObjectId('699ffbb20f893920f901bd0c'),
+      name: "Hummus Plate",
+      price: 7,
+    }, {
+      _id: new ObjectId('699ffbb20f893920f901bd0e'),
+      name: "Baklava",
+      price: 5,
+    }, {
+      _id: new ObjectId('699ffbb20f893920f901bd0f'),
+      name: "Pad See Ew",
+      price: 9,
+    }, {
+      _id: new ObjectId('699ffbb20f893920f901bd10'),
+      name: "Ramen",
+      price: 11,
+    }, {
+      _id: new ObjectId('699ffbb20f893920f901bd14'),
+      name: "Chicken Wings",
+      price: 9,
+    }, {
+      _id: new ObjectId('699ffbb20f893920f901bd15'),
+      name: "Burrito",
+      price: 10,
+    }, {
+      _id: new ObjectId('699ffbb20f893920f901bd16'),
+      name: "Chili",
+      price: 8.5,
+    }, {
+      _id: new ObjectId('699ffbb20f893920f901bd17'),
+      name: "Kebab",
+      price: 10.5,
+    }, {
+      _id: new ObjectId('699ffbb20f893920f901bd18'),
+      name: "Tabouli",
+      price: 7.5,
+    }, {
+      _id: new ObjectId('699ffbb20f893920f901bd1a'),
+      name: "Old Special Soup ",
+      price: 5,
+    }, {
+      _id: new ObjectId('699ffbb20f893920f901bd1b'),
+      name: "Spring Rolls",
+      price: 9.5,
+    }
+  ],
+  results1: {
+    acknowledged: true,
+    modifiedCount: 1,
+    upsertedId: null,
+    upsertedCount: 0,
+    matchedCount: 1,
+  },
+  results2: {
+    acknowledged: true,
+    deletedCount: 1,
+  },
+}
+
+ */
