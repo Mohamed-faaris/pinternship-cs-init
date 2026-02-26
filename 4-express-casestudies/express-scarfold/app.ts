@@ -1,9 +1,9 @@
-import express from 'express';
-import dischargeRoutes from './routes/discharge';
+import express, { application } from 'express';
+import ApplicationRouter from './routes/application';
 
 const app = express();
 app.use(express.json());
 
-app.use('/discharge', dischargeRoutes);
+app.use('/application', ApplicationRouter);
 
 export default app;
