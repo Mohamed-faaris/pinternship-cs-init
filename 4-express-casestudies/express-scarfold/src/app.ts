@@ -1,20 +1,39 @@
 import express from 'express';
-import { BookController } from './controllers/BookController';
-import { BookService } from './services/BookService';
-import { InMemoryBookRepository } from './repositories/InMemoryBookRepository';
+import { InMemoryCourseRepository } from './repositories/InMemoryCourseRepository';
+import { CourseService } from './services/CourseService';
 
 const app = express();
 app.use(express.json());
 
-const bookRepository = new InMemoryBookRepository();
-const bookService = new BookService(bookRepository);
-const bookController = new BookController(bookService);
+const courseRepo = new InMemoryCourseRepository();
+const courseService = new CourseService(courseRepo);
 
-app.post('/books/:id/borrow', (req, res) => bookController.borrowBook(req, res));
+app.post('/courses/:id/enroll', async (req, res) => {
+  try {
+    const result = await courseService.enroll(req.params.id, req.body.studentId);
+    res.json(result);
+  } catch (e: any) {
+    res.status(400).json({ error: e.message });
+  }
+});
+
+app.get('/students/:id/courses', async (req, res) => {
+  const courses = await courseService.getStudentCourses(req.params.id);
+  res.json(courses);
+});
+
+app.delete('/courses/:id', async (req, res) => {
+  try {
+    const result = await courseService.deleteCourse(req.params.id);
+    res.json(result);
+  } catch (e: any) {
+    res.status(400).json({ error: e.message });
+  }
+});
 
 const port = 3000;
 app.listen(port, () => {
-  console.log(`Library system running on port ${port}`);
+  console.log(`Server running on port ${port}`);
 });
 
 export default app;

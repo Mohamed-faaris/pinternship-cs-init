@@ -4,7 +4,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "bun --watch index.ts",
+    "dev": "bun --watch src/app.ts",
     "zip": "cd .. && bun zip express-scarfold && mv express-scarfold.zip express-scarfold/"
   },
   "devDependencies": {
