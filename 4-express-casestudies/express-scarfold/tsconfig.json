@@ -21,9 +21,14 @@
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
 
+    // Decorators for TypeDI
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+
     // Some stricter flags (disabled by default)
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noPropertyAccessFromIndexSignature": false
   }
+}
 }
