@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-FOLDER="express-scarfold"
+FOLDER="react-scaffold"
 ZIP_FILE="$1"
 
 # Validate input
