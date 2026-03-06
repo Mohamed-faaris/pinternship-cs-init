@@ -1,158 +1,127 @@
-import React, { useState } from "react";
+import { useReducer, useState } from "react";
 import "./App.css";
 
-interface Asset {
-  name: string;
-  symbol: string;
-  value: number;
-  change: number;
-}
+type Currency = "INR" | "USD" | "EUR";
 
-const initialAssets: Asset[] = [
-  { name: "Apple Inc.", symbol: "AAPL", value: 15000, change: 2.5 },
-  { name: "Tesla Inc.", symbol: "TSLA", value: 8000, change: -1.2 },
-  { name: "Bitcoin", symbol: "BTC", value: 5000, change: 5.7 },
-];
-
-function App() {
-  const [assets, setAssets] = useState<Asset[]>(initialAssets);
-
-  const handleUpdate = (updatedAsset: Asset) => {
-    setAssets((prevAssets) =>
-      prevAssets.map((asset) =>
-        asset.symbol === updatedAsset.symbol ? updatedAsset : asset,
-      ),
-    );
-  };
-
-  return (
-    <>
-      <h1>Portfolio Dashboard</h1>
-      <PortfolioSummary assets={assets} />
-      <PortfolioList assets={assets} />
-      <hr />
-      <h2>Edit Asset</h2>
-      <AssetEditor onUpdate={handleUpdate} />
-    </>
-  );
-}
-
-export const PortfolioSummary: React.FC<{ assets: Asset[] }> = ({ assets }) => {
-  const totalValue = assets.reduce((sum, asset) => sum + asset.value, 0);
-  const averageChange =
-    assets.length > 0
-      ? assets.reduce((sum, asset) => sum + asset.change, 0) / assets.length
-      : 0;
-
-  return (
-    <div>
-      <h2>Portfolio Summary</h2>
-      <p>Total Value: ${totalValue.toFixed(2)}</p>
-      <p>Average Change: {averageChange.toFixed(2)}%</p>
-    </div>
-  );
+const conversionRate:Record<Currency, number> = {
+  INR: 1,
+  USD: 0.013,
+  EUR: 0.011,
 };
 
-export const PortfolioList: React.FC<{ assets: Asset[] }> = ({ assets }) => (
-  <ul>
-    {assets.map((asset) => (
-      <li key={asset.symbol}>
-        {asset.name} ({asset.symbol}): ${asset.value.toFixed(2)} (
-        {asset.change.toFixed(2)}%)
-      </li>
-    ))}
-  </ul>
-);
+type Transaction = {
+  amount: number;
+  currency: Currency;
+  type:"income" | "expense";
+};
 
-interface AssetEditorProps {
-  onUpdate: (asset: Asset) => void;
-}
+type TransactionSummary = {
+  totalIncome: number;
+  totalExpense: number;
+  netBalance: number;
+};
 
-interface AssetEditorState {
-  name: string;
-  symbol: string;
-  value: number;
-  change: number;
-}
+type budgetTrackerState = {
+  transactions: Transaction[];
+  summary: TransactionSummary;
+};
 
-class AssetEditor extends React.Component<AssetEditorProps, AssetEditorState> {
-  state: AssetEditorState = {
-    name: "",
-    symbol: "",
-    value: 0,
-    change: 0,
-  };
+type BudgetTrackerActions = 
+ | {type: "income", payload: {amount: number, currency: Currency}}
+ | {type: "expense", payload: {amount: number, currency: Currency}};
 
-  handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    this.setState({ name: event.target.value });
-  };
-
-  handleSymbolChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    this.setState({ symbol: event.target.value.toUpperCase() });
-  };
-
-  handleValueChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    this.setState({ value: Number(event.target.value) });
-  };
-
-  handleChangeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    this.setState({ change: Number(event.target.value) });
-  };
-
-  handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-
-    const { name, symbol, value, change } = this.state;
-
-    this.props.onUpdate({
-      name: name.trim(),
-      symbol: symbol.trim().toUpperCase(),
-      value,
-      change,
-    });
-
-    this.setState({ name: "", symbol: "", value: 0, change: 0 });
-  };
-
-  render() {
-    const { name, symbol, value, change } = this.state;
-
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <input
-          name="name"
-          value={name}
-          onChange={this.handleNameChange}
-          placeholder="Asset name"
-          required
-        />
-        <input
-          name="symbol"
-          value={symbol}
-          onChange={this.handleSymbolChange}
-          placeholder="Symbol"
-          required
-        />
-        <input
-          name="value"
-          type="number"
-          value={value}
-          onChange={this.handleValueChange}
-          placeholder="Value"
-          required
-        />
-        <input
-          name="change"
-          type="number"
-          value={change}
-          onChange={this.handleChangeChange}
-          placeholder="Change %"
-          required
-        />
-        <button type="submit">Update Asset</button>
-      </form>
-    );
+const budgetTrackerReducer = (state: budgetTrackerState, action: BudgetTrackerActions): budgetTrackerState => {
+  switch(action.type){
+    case "income": {
+      const amountInINR = action.payload.amount * conversionRate[action.payload.currency];
+      const updatedTransactions = [...state.transactions, {amount: action.payload.amount, currency: action.payload.currency, type: "income"}];
+      const updatedSummary = {
+        totalIncome: state.summary.totalIncome + amountInINR,
+        totalExpense: state.summary.totalExpense,
+        netBalance: state.summary.netBalance + amountInINR,
+      };
+      return {
+        transactions: updatedTransactions,
+        summary: updatedSummary,
+      };
+    }
+    case "expense": {
+      const amountInINR = action.payload.amount * conversionRate[action.payload.currency];
+      const updatedTransactions = [...state.transactions, {amount: action.payload.amount, currency: action.payload.currency, type: "expense"}];
+      const updatedSummary = {
+        totalIncome: state.summary.totalIncome,
+        totalExpense: state.summary.totalExpense + amountInINR,
+        netBalance: state.summary.netBalance - amountInINR,
+      };
+      return {
+        transactions: updatedTransactions,
+        summary: updatedSummary,
+      };
+    }
+    default:
+      return state;
   }
+};
+
+ const initialState: budgetTrackerState = {
+  transactions: [],
+  summary: {
+    totalIncome: 0,
+    totalExpense: 0,
+    netBalance: 0,
+  },
+};
+
+
+function App() {
+  const [state, dispatch] = useReducer(budgetTrackerReducer, initialState);
+  const [amount, setAmount] = useState("");
+  const [currency, setCurrency] = useState<Currency>("INR");
+  const [type, setType] = useState<"income" | "expense">("income");
+  const [summaryCurrency, setSummaryCurrency] = useState<Currency>("INR");
+  return <>
+  <h1>Budget Tracker</h1>
+  <div>
+    <h2>Summary</h2>
+    <select value={summaryCurrency} onChange={(e) => setSummaryCurrency(e.target.value as Currency)}>
+      <option value="INR">INR</option>
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+    </select>
+    <p>Total Income: {state.summary.totalIncome.toFixed(2)*conversionRate[summaryCurrency]} {summaryCurrency}</p>
+    <p>Total Expense: {state.summary.totalExpense.toFixed(2)*conversionRate[summaryCurrency]} {summaryCurrency}</p>
+    <p>Net Balance: {state.summary.netBalance.toFixed(2)*conversionRate[summaryCurrency]} {summaryCurrency}</p>
+  </div>
+  <div>
+    <h2>transations</h2>
+    <ul>
+      {state.transactions.map((transaction, index) => (
+        <li key={index}>
+          {transaction.type.toUpperCase()}: {transaction.amount} {transaction.currency}
+        </li>
+      ))}
+    </ul>
+  </div>
+  <div>
+    <input type="number" placeholder="Amount" value={amount} onChange={(e) => setAmount(e.target.value)} />
+    <select value={currency} onChange={(e) => setCurrency(e.target.value as Currency)}>
+      <option value="INR">INR</option>
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+    </select>
+   <select value={type} onChange={(e) => setType(e.target.value as "income" | "expense")}>
+      <option value="income">Income</option>
+      <option value="expense">Expense</option>
+    </select>
+    <button onClick={() => {
+      const amountNum = parseFloat(amount);
+      if (!isNaN(amountNum)) {
+        dispatch({type, payload: {amount: amountNum, currency}});
+        setAmount("");
+      }
+    }}>Add Transaction</button>
+  </div>
+  </>;
 }
 
 export default App;
