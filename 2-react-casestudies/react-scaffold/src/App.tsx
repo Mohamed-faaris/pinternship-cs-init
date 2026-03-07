@@ -79,7 +79,7 @@ function App() {
 
   return (
     <div>
-      <h1>React.memo + useCallback Demo</h1>
+  
 
       <div>
         <p>
@@ -88,10 +88,6 @@ function App() {
         <button onClick={() => setUnrelatedState((prev) => prev + 1)}>
           Update Unrelated State
         </button>
-        <p>
-          Clicking this button updates parent state but does NOT re-render
-          TagInput or TagList
-        </p>
       </div>
 
       <h3>Add New Tag</h3>
@@ -100,20 +96,6 @@ function App() {
       <h3>Tag List ({tags.length} tags)</h3>
       <TagList tags={tags} />
 
-      <div>
-        <h4>Check the console to see render logs:</h4>
-        <ul>
-          <li>
-            Clicking "Update Unrelated State" only logs:
-            <code>[RENDER] App rendered</code>
-          </li>
-          <li>
-            Adding a tag logs: <code>[RENDER] App rendered</code>,
-            <code>[RENDER] TagList rendered</code>
-          </li>
-          <li>TagInput only re-renders when typing (internal state change)</li>
-        </ul>
-      </div>
     </div>
   );
 }
