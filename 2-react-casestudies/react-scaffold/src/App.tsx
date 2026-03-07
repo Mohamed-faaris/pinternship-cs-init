@@ -9,7 +9,7 @@ interface UserSession {
   expiresAt: Date;
 }
 
-const useUserSession = create(
+export const useUserSession = create(
   persist<UserSession>(
     () => ({
       userId: "",
@@ -51,20 +51,109 @@ interface HistoryEntry {
   timestamp: number;
 }
 
+interface Collaborator {
+  id: string;
+  name: string;
+  email: string;
+  role: string;
+}
+
+interface CollaboratorsState {
+  collaborators: Collaborator[];
+  setCollaborators: (collaborators: Collaborator[]) => void;
+}
+
+export const useCollaboratorsStore = create<CollaboratorsState>()(
+  devtools(
+    immer((set) => ({
+      collaborators: [],
+      setCollaborators: (collaborators: Collaborator[]) =>
+        set(
+          (state) => {
+            state.collaborators = collaborators;
+          },
+          false,
+          "collaborators/setCollaborators",
+        ),
+    })),
+    { name: "CollaboratorsStore" },
+  ),
+);
+
 interface NotesState {
   notes: Note[];
   history: HistoryEntry[];
+  addNote: (note: Omit<Note, "id">) => string;
+  updateNote: (id: string, updates: Partial<Omit<Note, "id">>) => void;
+  deleteNote: (id: string) => void;
   addHistoryEntry: (noteId: string, action: string) => void;
   clearHistory: () => void;
+  getNoteById: (id: string) => Note | undefined;
+  getNotesByKeyword: (keyword: string) => Note[];
+  getHistoryForNote: (noteId: string) => HistoryEntry[];
 }
 
-const useNotesStore = create<NotesState>()(
+export const useNotesStore = create<NotesState>()(
   devtools(
     immer(
       persist(
-        (set) => ({
+        (set, get) => ({
           notes: [],
           history: [],
+
+          addNote: (note) => {
+            const id = crypto.randomUUID();
+            set(
+              (state) => {
+                state.notes.push({ ...note, id });
+                state.history.push({
+                  noteId: id,
+                  action: "CREATE",
+                  timestamp: Date.now(),
+                });
+              },
+              false,
+              "notes/addNote",
+            );
+            return id;
+          },
+
+          updateNote: (id, updates) => {
+            set(
+              (state) => {
+                const note = state.notes.find((n) => n.id === id);
+                if (note) {
+                  Object.assign(note, updates);
+                  state.history.push({
+                    noteId: id,
+                    action: "UPDATE",
+                    timestamp: Date.now(),
+                  });
+                }
+              },
+              false,
+              "notes/updateNote",
+            );
+          },
+
+          deleteNote: (id) => {
+            set(
+              (state) => {
+                const index = state.notes.findIndex((n) => n.id === id);
+                if (index !== -1) {
+                  state.notes.splice(index, 1);
+                  state.history.push({
+                    noteId: id,
+                    action: "DELETE",
+                    timestamp: Date.now(),
+                  });
+                }
+              },
+              false,
+              "notes/deleteNote",
+            );
+          },
+
           addHistoryEntry: (noteId: string, action: string) =>
             set(
               (state) => {
@@ -77,6 +166,7 @@ const useNotesStore = create<NotesState>()(
               false,
               "notes/addHistoryEntry",
             ),
+
           clearHistory: () =>
             set(
               (state) => {
@@ -85,9 +175,25 @@ const useNotesStore = create<NotesState>()(
               false,
               "notes/clearHistory",
             ),
+
+          getNoteById: (id) => get().notes.find((n) => n.id === id),
+
+          getNotesByKeyword: (keyword) =>
+            get().notes.filter(
+              (n) =>
+                n.title.toLowerCase().includes(keyword.toLowerCase()) ||
+                n.content.toLowerCase().includes(keyword.toLowerCase()),
+            ),
+
+          getHistoryForNote: (noteId) =>
+            get().history.filter((h) => h.noteId === noteId),
         }),
         {
           name: "notes-storage",
+          partialize: (state) => ({
+            notes: state.notes,
+            history: state.history,
+          }),
         },
       ),
     ),
@@ -95,8 +201,6 @@ const useNotesStore = create<NotesState>()(
   ),
 );
 
-function App() {
-  return <></>;
-}
-
-export default App;
+export const unsubNotes = useNotesStore.subscribe((state) => {
+  console.log("History updated. Total entries:", state.history.length);
+});
