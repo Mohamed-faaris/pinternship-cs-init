@@ -3,7 +3,13 @@
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@types/jest": "^30.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.56.1",
+    "@typescript-eslint/parser": "^8.56.1",
+    "eslint": "^10.0.3",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react": "^7.37.5",
     "jest": "^30.2.0",
+    "prettier": "^3.8.1",
     "ts-jest": "^29.4.6",
     "webpack-bundle-analyzer": "^5.2.0",
     "zustand": "^5.0.11"
