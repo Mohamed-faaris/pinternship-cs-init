@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@tanstack/react-query": "^5.90.21",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@types/jest": "^30.0.0",
