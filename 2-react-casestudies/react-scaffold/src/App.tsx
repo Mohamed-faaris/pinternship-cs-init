@@ -1,70 +1,20 @@
-import { useState, Suspense, lazy } from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import ErrorBoundary from "./ErrorBoundary";
+import { useEffect } from "react";
+import debounce from "lodash-es/debounce";
+import dayjs from "dayjs";
 
-const ProfileSettings = lazy(() => import("./ProfileSettings"));
-const AdminPanel = lazy(() => import("./AdminPanel"));
+export default function App() {
+  useEffect(() => {
+    const debouncedFn = debounce(() => console.log("debounced"), 300);
+    debouncedFn();
+    return () => debouncedFn.cancel();
+  }, []);
 
-function LoadingSpinner() {
-  return (
-    <div>
-      <div>Loading...</div>
-    </div>
-  );
-}
-
-function Home() {
-  const [showSettings, setShowSettings] = useState(false);
+  const formattedDate = dayjs().format("MMMM D, YYYY");
 
   return (
     <div>
-      <h1>Welcome to the Dashboard</h1>
-
-      <button onClick={() => setShowSettings(!showSettings)}>
-        {showSettings ? "Hide Settings" : "Settings"}
-      </button>
-
-      {showSettings && (
-        <ErrorBoundary fallback={<div>Failed to load settings</div>}>
-          <Suspense fallback={<LoadingSpinner />}>
-            <ProfileSettings />
-          </Suspense>
-        </ErrorBoundary>
-      )}
-
-      <nav>
-        <Link to="/admin">Go to Admin Panel</Link>
-      </nav>
+      <h1> Bundle Analysis Demo</h1>
+      <p>Formatted Date: {formattedDate}</p>
     </div>
   );
 }
-
-function App() {
-  return (
-    <BrowserRouter>
-      <div>
-        <header>
-          <Link to="/">MyApp</Link>
-        </header>
-
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route
-              path="/admin"
-              element={
-                <ErrorBoundary>
-                  <Suspense fallback={<LoadingSpinner />}>
-                    <AdminPanel />
-                  </Suspense>
-                </ErrorBoundary>
-              }
-            />
-          </Routes>
-        </main>
-      </div>
-    </BrowserRouter>
-  );
-}
-
-export default App;
